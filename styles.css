@@ -1,0 +1,115 @@
+/* Estilos generales para el cuerpo de la página */
+body, html {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #10c5dd; /* Color de fondo azul claro */
+    text-align: center; /* Centra el texto del título */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+/* Contenedor para el título y la flor */
+.container {
+    position: relative;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura */
+    display: flex;
+    flex-direction: column; /* Alinea el título y la flor verticalmente */
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'Fuente';
+    src: url('fonts/Lonely Coffee.ttf') format('truetype'); /* Ruta al archivo .ttf */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilo para el título */
+.title {
+    color: #750cd8; /* Color del texto del título */
+    font-size: 35px; /* Tamaño del texto del título */
+    font-family: 'Fuente', sans-serif; /* Fuente personalizada */
+    margin-top: -200px;
+    margin-bottom: 200px; /* Espacio entre el título y la flor */
+}
+
+/* Estilo para la flor */
+.flower {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+/* Estilos para los pétalos de la flor */
+.petal {
+    position: absolute;
+    width: 80px;
+    height: 170px; /* Ajusta la altura para formar óvalos */
+    background: linear-gradient(45deg, #ff4081, #ff80ab); /* Color rosa degradado de los pétalos */
+    border-radius: 50%; /* Forma de óvalo */
+    transform-origin: bottom center; /* El origen de la transformación está en la parte inferior del centro */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg); /* Centro y rotación */
+    z-index: 2; /* Asegura que los pétalos estén sobre el tallo */
+}
+
+/* Posicionamiento y rotación de los pétalos */
+.petal1 {
+    transform: translate(-50%, -125%) rotate(0deg);
+}
+
+.petal2 {
+    transform: translate(-50%, -125%) rotate(45deg);
+}
+
+.petal3 {
+    transform: translate(-50%, -125%) rotate(90deg);
+}
+
+.petal4 {
+    transform: translate(-50%, -125%) rotate(135deg);
+}
+
+.petal5 {
+    transform: translate(-50%, -125%) rotate(180deg);
+}
+
+.petal6 {
+    transform: translate(-50%, -125%) rotate(225deg);
+}
+
+.petal7 {
+    transform: translate(-50%, -125%) rotate(270deg);
+}
+
+.petal8 {
+    transform: translate(-50%, -125%) rotate(315deg);
+}
+
+/* Estilo para el centro de la flor */
+.center {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background-color: #ffeb3b; /* Color amarillo sólido del centro de la flor */
+    border-radius: 50%;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Asegura que el centro esté sobre el tallo */
+}
+
+/* Estilo para el tallo de la flor */
+.stem {
+    position: absolute;
+    width: 30px;
+    height: 300px; /* Altura del tallo */
+    background: linear-gradient(to bottom, #2e7d32, #81c784); /* Verde degradado del tallo */
+    border-radius: 5px; /* Bordes redondeados para el tallo */
+    top: 66%; /* Posiciona el tallo debajo de la flor */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0; /* Asegura que el tallo esté detrás de los pétalos y el centro */
+}
